@@ -1,0 +1,241 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="An accessible learning webpage designed for better performance and usability.">
+
+    <title>Learn Better | Accessible Learning</title>
+
+    <!-- External stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Skip link for keyboard and screen reader users -->
+    <a class="skip-link" href="#main-content">
+        Skip to main content
+    </a>
+
+    <!-- Website Header -->
+    <header class="site-header">
+        <div class="container header-inner">
+
+            <a class="brand" href="#home" aria-label="Learn Better home">
+                Learn Better
+            </a>
+
+            <!-- Main Navigation -->
+            <nav aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#lessons">Lessons</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+
+        <!-- Hero Section -->
+        <section class="hero container"
+                 id="home"
+                 aria-labelledby="hero-title">
+
+            <div class="hero-copy">
+                <p class="eyebrow">
+                    Simple learning. Better access.
+                </p>
+
+                <h1 id="hero-title">
+                    Learning That Works for Everyone
+                </h1>
+
+                <p>
+                    Explore clear lessons and useful study tools
+                    in a lightweight, accessible learning space.
+                </p>
+
+                <a class="button" href="#lessons">
+                    Explore Lessons
+                </a>
+            </div>
+
+            <!-- Lightweight illustration without an external image -->
+            <div class="hero-art"
+                 role="img"
+                 aria-label="Illustration of a student reading a book">
+
+                <span aria-hidden="true">📚</span>
+
+            </div>
+
+        </section>
+
+        <!-- Features Section -->
+        <section id="features"
+                 class="section container"
+                 aria-labelledby="features-title">
+
+            <h2 id="features-title">
+                Designed for Better Learning
+            </h2>
+
+            <div class="card-grid">
+
+                <article class="card">
+                    <h3>Easy to Navigate</h3>
+                    <p>
+                        Semantic HTML and clear headings help users
+                        find information quickly.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Fast by Design</h3>
+                    <p>
+                        Lightweight CSS and fewer dependencies
+                        help reduce page loading overhead.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Keyboard Friendly</h3>
+                    <p>
+                        Navigate links and controls using the
+                        keyboard with visible focus indicators.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Lessons Section -->
+        <section id="lessons"
+                 class="section lessons"
+                 aria-labelledby="lessons-title">
+
+            <div class="container">
+
+                <h2 id="lessons-title">
+                    Start with a Lesson
+                </h2>
+
+                <p>
+                    Choose a topic and learn at your own pace.
+                </p>
+
+                <ul class="lesson-list">
+
+                    <li>
+                        <span class="lesson-number"
+                              aria-hidden="true">01</span>
+
+                        <div>
+                            <h3>Digital Basics</h3>
+                            <p>
+                                Build confidence with everyday technology.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <span class="lesson-number"
+                              aria-hidden="true">02</span>
+
+                        <div>
+                            <h3>Problem Solving</h3>
+                            <p>
+                                Learn to break complex tasks into
+                                smaller, manageable steps.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <span class="lesson-number"
+                              aria-hidden="true">03</span>
+
+                        <div>
+                            <h3>Study Skills</h3>
+                            <p>
+                                Discover practical ways to plan,
+                                learn, and revise.
+                            </p>
+                        </div>
+                    </li>
+
+                </ul>
+
+            </div>
+        </section>
+
+        <!-- Contact and Signup Section -->
+        <section id="contact"
+                 class="section container"
+                 aria-labelledby="contact-title">
+
+            <h2 id="contact-title">
+                Get Learning Updates
+            </h2>
+
+            <p>
+                Enter your email address to explore the accessible
+                form design used in this project.
+            </p>
+
+            <form class="signup-form" action="#" method="get">
+
+                <div class="form-field">
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        autocomplete="email"
+                        required
+                        aria-describedby="email-help">
+
+                    <small id="email-help">
+                        Enter a valid email address.
+                    </small>
+                </div>
+
+                <button class="button" type="submit">
+                    Sign Up
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <!-- Website Footer -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
+
+            <p>
+                &copy; 2026 Learn Better.
+                Performance and Accessibility Project.
+            </p>
+
+            <a href="#main-content">
+                Back to Top
+            </a>
+
+        </div>
+    </footer>
+
+</body>
+</html>

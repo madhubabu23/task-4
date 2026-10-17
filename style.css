@@ -1,0 +1,76 @@
+/* Lightweight, mobile-first stylesheet. No external fonts or frameworks. */
+:root {
+  color-scheme: light;
+  --ink: #172033;
+  --muted: #4b5568;
+  --brand: #174ea6;
+  --brand-dark: #103a7b;
+  --surface: #f3f6fb;
+  --border: #d5dce8;
+  --focus: #ffbf47;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.6;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; color: var(--ink); background: #fff; }
+a { color: var(--brand); text-underline-offset: .2em; }
+a:hover { color: var(--brand-dark); }
+a:focus-visible, button:focus-visible, input:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}
+.container { width: min(100% - 2rem, 70rem); margin-inline: auto; }
+.skip-link {
+  position: absolute; top: .5rem; left: .5rem; z-index: 10;
+  padding: .65rem 1rem; color: #fff; background: #111827;
+  transform: translateY(-160%);
+}
+.skip-link:focus { transform: translateY(0); }
+.site-header { border-bottom: 1px solid var(--border); background: #fff; }
+.header-inner, .footer-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 1rem; padding-block: 1rem;
+}
+.brand { font-size: 1.2rem; font-weight: 800; text-decoration: none; color: var(--ink); }
+.nav-list { display: flex; flex-wrap: wrap; gap: .8rem 1.2rem; padding: 0; margin: 0; list-style: none; }
+.nav-list a { font-weight: 650; }
+.hero { display: grid; gap: 2rem; align-items: center; padding-block: clamp(3rem, 8vw, 6rem); }
+.hero-copy { max-width: 42rem; }
+.eyebrow { color: var(--brand); font-weight: 750; text-transform: uppercase; letter-spacing: .08em; }
+h1, h2, h3 { line-height: 1.2; }
+h1 { max-width: 13ch; margin-block: .3rem 1rem; font-size: clamp(2.25rem, 6vw, 4.25rem); letter-spacing: -.04em; }
+h2 { font-size: clamp(1.7rem, 4vw, 2.4rem); margin-top: 0; }
+h3 { margin-block: 0 .5rem; }
+.hero-copy > p:not(.eyebrow), .section > p, .lessons .container > p { max-width: 60ch; color: var(--muted); }
+.hero-art { display: grid; place-items: center; min-height: 12rem; border-radius: 1.5rem; background: var(--surface); }
+.hero-art span { font-size: clamp(5rem, 14vw, 9rem); }
+.button {
+  display: inline-block; border: 0; border-radius: .5rem; padding: .75rem 1.1rem;
+  background: var(--brand); color: #fff; font: inherit; font-weight: 700; text-decoration: none; cursor: pointer;
+}
+.button:hover { background: var(--brand-dark); color: #fff; }
+.section { padding-block: 3.5rem; }
+.card-grid { display: grid; gap: 1rem; }
+.card { padding: 1.4rem; border: 1px solid var(--border); border-radius: .8rem; }
+.card p, .lesson-list p { margin-bottom: 0; color: var(--muted); }
+.lessons { background: var(--surface); }
+.lesson-list { display: grid; gap: 1rem; padding: 0; margin: 2rem 0 0; list-style: none; }
+.lesson-list li { display: flex; gap: 1rem; align-items: flex-start; padding: 1.2rem; background: #fff; border: 1px solid var(--border); border-radius: .8rem; }
+.lesson-number { display: grid; flex: 0 0 2.5rem; width: 2.5rem; height: 2.5rem; place-items: center; border-radius: 50%; background: #e3ebfa; color: #123d82; font-weight: 800; }
+.signup-form { display: flex; flex-wrap: wrap; align-items: end; gap: 1rem; max-width: 38rem; margin-top: 1.5rem; }
+.form-field { display: grid; flex: 1 1 16rem; gap: .35rem; }
+label { font-weight: 700; }
+input { width: 100%; min-height: 2.8rem; padding: .6rem .75rem; border: 1px solid #657087; border-radius: .4rem; color: var(--ink); font: inherit; }
+small { color: var(--muted); }
+.site-footer { border-top: 1px solid var(--border); }
+.footer-inner { flex-wrap: wrap; }
+.footer-inner p { margin: 0; color: var(--muted); }
+@media (min-width: 44rem) {
+  .hero { grid-template-columns: 1.2fr .8fr; }
+  .card-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
